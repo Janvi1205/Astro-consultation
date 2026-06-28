@@ -283,7 +283,7 @@ const AdminLayout = ({ children }) => {
         </header>
 
         {/* ── Main Dashboard Content Body ── */}
-        <main className="flex-1 p-6 md:p-8 bg-[#2B124C] z-10 pb-24 lg:pb-8 min-w-0 w-full overflow-x-hidden">
+        <main className="flex-1 p-6 md:p-8 bg-[#2B124C] pb-24 lg:pb-8 min-w-0 w-full overflow-x-hidden">
           {/* Mobile Greeting for Dashboard only */}
           {location.pathname === '/admin/dashboard' && (
             <div className="lg:hidden flex flex-col gap-1.5 text-left mb-6 text-[#FCFAF6]">
@@ -302,7 +302,7 @@ const AdminLayout = ({ children }) => {
         </main>
 
         {/* Bottom Mobile Navigation Bar */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#1A0638] border-t border-[#D4AF37]/15 z-40 py-2.5 px-6 flex items-center justify-around shadow-lg">
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#1A0638] border-t border-[#D4AF37]/15 z-30 py-2.5 px-6 flex items-center justify-around shadow-lg">
           {navigation.map((item) => {
             const Icon = item.icon;
             const isActive = location.pathname === item.path;

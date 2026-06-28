@@ -62,7 +62,7 @@ const BookingDetailsDrawer = ({ booking, isOpen, onClose, onStatusChange }) => {
             animate={{ opacity: 0.45 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#120428]/40 backdrop-blur-xs z-40 cursor-pointer"
+            className="fixed inset-0 bg-[#120428]/40 backdrop-blur-xs z-[90] cursor-pointer"
           />
 
           {/* Sliding Drawer Container */}
@@ -71,7 +71,7 @@ const BookingDetailsDrawer = ({ booking, isOpen, onClose, onStatusChange }) => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 220 }}
-            className="fixed inset-y-0 right-0 w-full sm:w-[480px] bg-[#FCFAF6] border-l border-[#D4AF37]/10 shadow-2xl z-50 flex flex-col h-full text-left"
+            className="fixed inset-y-0 right-0 w-full sm:w-[480px] bg-[#FCFAF6] border-l border-[#D4AF37]/10 shadow-2xl z-[100] flex flex-col h-full text-left"
           >
             {/* Drawer Header */}
             {/* Desktop Header */}

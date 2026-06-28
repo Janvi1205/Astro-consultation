@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /booking
+Disallow: /admin/
+Disallow: /booking-success
+
+Sitemap: https://pradeepmalhotra.com/sitemap.xml

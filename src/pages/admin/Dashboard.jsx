@@ -366,13 +366,7 @@ const Dashboard = () => {
                               >
                                 <Phone className="w-3.5 h-3.5" />
                               </a>
-                              <button
-                                onClick={() => setRescheduleBooking(b)}
-                                title="Reschedule Slot"
-                                className="p-1.5 rounded-lg border border-[#2B124C]/10 text-amber-600 hover:border-amber-400 hover:bg-amber-50 cursor-pointer transition-colors"
-                              >
-                                <CalendarClock className="w-3.5 h-3.5" />
-                              </button>
+
                               <button
                                 onClick={() => handleCancelBooking(b.id)}
                                 title="Cancel Session"

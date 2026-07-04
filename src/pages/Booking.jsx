@@ -89,6 +89,29 @@ const Booking = () => {
       formattedDate = `${year}-${month}-${day}`;
     }
 
+    // Check if consultation price is above 40,000
+    if (selectedService && Number(selectedService.price) > 40000) {
+      const messageText = `Hello Pradeep Ji, I would like to book a consultation.
+
+*Service:* ${selectedService.title}
+*Price:* ₹${selectedService.price.toLocaleString()}
+*Preferred Date:* ${selectedDate?.fullString || ''}
+*Preferred Time:* ${selectedTime}
+
+*My Details:*
+- *Name:* ${details.name}
+- *Email:* ${details.email}
+- *Phone:* ${details.phone}
+- *Birth Date:* ${details.birthDate}
+- *Birth Time:* ${details.birthTime}
+- *Birth Place:* ${details.birthPlace}`;
+
+      const whatsappUrl = `https://wa.me/919717721217?text=${encodeURIComponent(messageText)}`;
+      window.location.href = whatsappUrl;
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       // 1. Load Razorpay script
       const scriptLoaded = await loadRazorpayScript();
